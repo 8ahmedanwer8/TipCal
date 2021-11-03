@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <!--Left Side Elements-->
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tvTip"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipPercentage" />
+
+    <TextView
+        android:id="@+id/tvBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/tvBase"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTipPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBase"
+        tools:text="24%" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/tvTotal"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTip" />
+
+    <!--Right Side Elements-->
+    <EditText
+        android:id="@+id/etBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/etBase"
+        android:inputType="numberDecimal"
+        android:maxLength="10"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvBase"
+        app:layout_constraintTop_toTopOf="@+id/tvBase"
+        app:layout_constraintVertical_bias="0.0"
+        android:importantForAutofill="no" />
+
+    <SeekBar
+        android:id="@+id/seekBarTipPercentage"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipPercentage"
+        app:layout_constraintEnd_toEndOf="@+id/etBase"
+        app:layout_constraintStart_toStartOf="@+id/etBase"
+        app:layout_constraintTop_toTopOf="@+id/tvTipPercentage"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:maxLength="10"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTip"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarTipPercentage"
+        app:layout_constraintStart_toStartOf="@+id/seekBarTipPercentage"
+        app:layout_constraintTop_toTopOf="@+id/tvTip"
+        tools:text="0.69" />
+
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:maxLength="10"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTotal"
+        app:layout_constraintEnd_toEndOf="@+id/tvTipAmount"
+        app:layout_constraintStart_toStartOf="@+id/tvTipAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvTotal"
+        tools:text="69.69" />
+
+    <TextView
+        android:id="@+id/tvTipCommenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        app:layout_constraintBottom_toTopOf="@+id/tvTipAmount"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarTipPercentage"
+        app:layout_constraintStart_toStartOf="@+id/seekBarTipPercentage"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTipPercentage"
+        app:layout_constraintVertical_bias="0.375"
+        tools:text="Enter" />
+
+    <TextView
+        android:id="@+id/tvTipCommenterMoving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#00ED0A"
+        app:layout_constraintBottom_toTopOf="@+id/tvTipAmount"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarTipPercentage"
+        app:layout_constraintStart_toStartOf="@+id/seekBarTipPercentage"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTipPercentage"
+        app:layout_constraintVertical_bias="0.375"
+        tools:text="Enter" />
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/footer"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

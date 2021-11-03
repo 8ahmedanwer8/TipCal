@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TipCal</string>
+    <string name="tvBase">Base</string>
+    <string name="tvTotal">Total</string>
+    <string name="etBase">Enter Cost of Meal</string>
+    <string name="tvTip">Tip</string>
+    <string name="footer">Made by a Confused Dev</string>
+</resources>
