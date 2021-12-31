@@ -1,7 +1,7 @@
 # TipCalAndroidApp
 Check it out on the playstore https://play.google.com/store/apps/details?id=com.confuseddevs.tipcal 
 
-Demo Video: Coming Soon
+Demo Video: https://www.youtube.com/watch?v=onSiI4inj-M
 <p float="left">
   <img src ="promo_1.png" width = 210></img>
   <img src ="promo_2.png" width = 210></img>
